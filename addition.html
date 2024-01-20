@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addition</title>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+      <a href="multiplication.html">Go to Multiplication</a>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>Addition</h1>
+    </header>
+    <!-- Main Content -->
+    <main>
+        <p> Addition is like bringing numbers together to find out how much we have in total.</p>
+
+        <!-- Input Form -->
+        <form id="additionForm">
+            <label for="num1">Enter the first number:</label>
+            <input type="number" id="num1" required>
+            <label for="num2">Enter the second number:</label>
+            <input type="number" id="num2" required>
+            <button type="button" onclick="calculateAddition()">Calculate Addition</button>
+        </form>
+
+        <!-- Result -->
+        <p id="additionResult"></p>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Addition Page. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function calculateAddition() {
+            // Fetch values from input fields
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+
+            // Perform addition
+            const result = num1 + num2;
+
+            // Display the result
+            document.getElementById('additionResult').innerText = `Result: ${result}`;
+        }
+    </script>
+
+</body>
+</html>

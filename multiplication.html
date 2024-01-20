@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication</title>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+      <a href="addition.html">Go to Addition</a>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>Multiplication</h1>
+    </header>
+    <!-- Main Content -->
+    <main>
+        <p> Multiplication is the math way of combining numbers to find their total. It involves taking two or more numbers, multiplying them, and getting the result, known as the product.</p>
+
+        <!-- Input Form -->
+        <form id="additionForm">
+            <label for="num1">Enter the first number:</label>
+            <input type="number" id="num1" required>
+            <label for="num2">Enter the second number:</label>
+            <input type="number" id="num2" required>
+            <button type="button" onclick="calculateMultiplication()">Calculate Multiplication</button>
+        </form>
+
+        <!-- Result -->
+        <p id="multiplicationResult"></p>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Multiplication Page. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function calculateMultiplication() {
+            // Fetch values from input fields
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+
+            // Perform multiplication
+            const result = num1 * num2;
+
+            // Display the result
+            document.getElementById('multiplicationResult').innerText = `Result of Multiplication: ${result}`;
+        }
+    </script>
+
+</body>
+</html>
